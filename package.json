@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/adrizos/express-techspike.git"
   },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*"
+  },
   "author": "Alex Drizos",
   "license": "ISC",
   "bugs": {
