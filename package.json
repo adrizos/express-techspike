@@ -1,0 +1,19 @@
+{
+  "name": "express-techspike",
+  "version": "1.0.0",
+  "description": "testing out some express functionality",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrizos/express-techspike.git"
+  },
+  "author": "Alex Drizos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrizos/express-techspike/issues"
+  },
+  "homepage": "https://github.com/adrizos/express-techspike#readme"
+}
