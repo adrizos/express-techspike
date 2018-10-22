@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-
+var expressValidator = require('express-validator');
 var app = express();
 
 /* Middleware */
@@ -33,8 +33,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false})); //writing documentation for bodyParser
 
 
+
+
 // Set static path
 app.use(express.static(path.join(__dirname, 'public')));
+
+// expressValidator Middleware
+app.use(expressValidator(
 
 var users = [
   {
@@ -62,9 +67,19 @@ app.get('/', function(req, res){
   //var title = 'Customers';
   res.render('index', {
     title: 'Customers',
-    users: users 
+    users: users
   });
 });
+
+app.post('/users/add', function(req,res){
+  var newUser = {
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email
+  }
+  console.log(newUser);
+});
+
 
 app.listen(3000, function(){
   console.log('server started on Port 3000...'); `  `
